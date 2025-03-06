@@ -1,0 +1,125 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    text-align: center;
+
+    background-color: #ffe0b2;
+
+    color: #333;
+
+    padding: 20px;
+
+}
+
+.hidden { display: none; }
+
+/* Cute button styles */
+
+button {
+
+    background-color: #ffcc80; /* Soft orange */
+
+    color: #5d4037;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    margin: 10px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: background 0.3s, transform 0.2s;
+
+}
+
+button:hover {
+
+    background-color: #ffa726; /* Slightly darker orange */
+
+    transform: scale(1.05);
+
+}
+
+/* Selected answer button effect */
+
+.selected {
+
+    background-color: #ff7043 !important; /* Cute coral color */
+
+    color: white !important;
+
+}
+
+/* Make the final question stand out */
+
+.final-question {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #d84315; /* A standout deep orange */
+
+    margin-top: 20px;
+
+}
+
+/* Bird Animations */
+
+.animated-bird {
+
+    display: inline-block;
+
+    animation-duration: 2s;
+
+    animation-iteration-count: infinite;
+
+}
+
+.parrot-animation { animation-name: flapWings; }
+
+@keyframes flapWings { 0% { transform: translateY(0); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0); } }
+
+.penguin-animation { animation-name: waddle; }
+
+@keyframes waddle { 0% { transform: rotate(0); } 50% { transform: rotate(5deg); } 100% { transform: rotate(0); } }
+
+.swan-animation { animation-name: glide; }
+
+@keyframes glide { 0% { transform: translateX(-5px); } 50% { transform: translateX(5px); } 100% { transform: translateX(-5px); } }
+
+.eagle-animation { animation-name: soar; }
+
+@keyframes soar { 0% { transform: translateY(-3px); } 50% { transform: translateY(3px); } 100% { transform: translateY(-3px); } }
+
+/* Fade-in Effect */
+
+#result-container { opacity: 0; animation: fadeIn 1.5s forwards; }
+
+@keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } } 
+#end-credit {
+   margin-top: 30px;
+   font-size: 14px;
+   color: #555;
+   text-align: center;
+   padding: 10px;
+   font-style: italic;
+   opacity: 0.8;
+}
+/* Hidden by default */
+.hidden {
+   display: none;
+}
+#quiz-title {
+   font-size: 28px;
+   font-weight: bold;
+   color: #d84315; /* Cute deep orange */
+   text-align: center;
+   margin-bottom: 20px;
+}
