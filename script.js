@@ -28,10 +28,13 @@ const resultContainer = document.getElementById("result-container");
 const resultMessage = document.getElementById("result-message");
 const specialMessage = document.getElementById("special-message");
 submitNameBtn.addEventListener("click", () => {
-   if (userNameInput.value.trim() !== "") {
-       welcomeMessage.innerText = `Hey ${userNameInput.value}! Ready for a Fun Quiz?`;
-       nameInputContainer.classList.add("hidden");
-       quizIntro.classList.remove("hidden");
+   let userName = userNameInput.value.trim(); // Trim spaces to avoid blank input
+   if (userName !== "") {  // Check if name is not empty
+       welcomeMessage.innerText = `Hey ${userName}! Let’s take flight into this fun quiz! 🚀🐦`;
+       nameInputContainer.classList.add("hidden"); // Hide name input
+       quizIntro.classList.remove("hidden"); // Show the next section
+   } else {
+       alert("Please enter your name before starting! 😊"); // Prevent empty input
    }
 });
 startBtn.addEventListener("click", () => {
